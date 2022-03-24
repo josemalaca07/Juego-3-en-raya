@@ -1,0 +1,33 @@
+
+:root{
+    --tamano-celda: 10em;
+    --tamano-figura: calc(var(--tamano-celda) * 0.5);
+}
+#tablero{
+    display: grid;
+    grid-template-columns: repeat(3, var(--tamano-celda));
+    grid-template-rows: repeat(3, var(--tamano-celda));
+    justify-content: center;
+    align-content: center;
+    padding-top: 5em;
+}
+
+.celda{
+    border: 5px solid white;
+}
+
+.celda:nth-child(1), .celda:nth-child(2), .celda:nth-child(3){
+    border-top: unset; 
+}
+
+.celda:nth-child(3n + 1){
+    border-left: unset; 
+}
+
+.celda:nth-child(7), .celda:nth-child(8), .celda:nth-child(9){
+    border-bottom: unset; 
+}
+
+.celda:nth-child(3n){
+    border-right: unset; 
+}
